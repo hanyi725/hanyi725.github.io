@@ -105,7 +105,10 @@
 <h1 id="4-分割线："><a href="#4-分割线：" class="headerlink" title="4.分割线："></a>4.分割线：</h1><p>用一溜- 或者*表示（大于等于三个）</p>
 <h1 id="5-图片"><a href="#5-图片" class="headerlink" title="5.图片"></a>5.图片</h1><h2 id="基础语法："><a href="#基础语法：" class="headerlink" title="基础语法："></a>基础语法：</h2><p> ![Alt text](图片链接 “optional title”)</p>
 <p> alt text:图片描述 可写可不写</p>
-<h2 id="插入本地图片："><a href="#插入本地图片：" class="headerlink" title="插入本地图片："></a>插入本地图片：</h2><p> 在括号里写图片路径就完事 但是不好分享不好更改 如果不小心图片不在那里了 你的显示就GG了</p>
+<h2 id="插入本地图片："><a href="#插入本地图片：" class="headerlink" title="插入本地图片："></a>插入本地图片：</h2><p> 先在source/_posts 下新建一个asset 文件夹 然后把图片存进去</p>
+<p> 插入语法：</p>
+<p> ![alt text](./assets/图片名字.png)</p>
+<p> 在括号里写图片相对路径就完事 但是不好分享不好更改 如果不小心图片不在那里了 你的显示就GG了</p>
 <h2 id="插入网络图片："><a href="#插入网络图片：" class="headerlink" title="插入网络图片："></a>插入网络图片：</h2><p> 在括号里也是写图片链接 但是比较依赖网络 人家要是没了 显示自然就没了</p>
 <p> 把图片存入markdown文件：（这个比较好 需要用Python）</p>
 <p> 就是把图片转成base64再转回来，</p>
@@ -239,9 +242,11 @@
 <p>  等待安装好以后 输入 <code>hexo -v</code> 查看hexo版本</p>
 <p>  之后输入：<code>hexo init</code> 初始化 hexo </p>
 <p>  这个完成后 打开辣个你喜欢的文件夹(其实就是你的博客文件夹) 就可以看到里面多了一堆东西 就说明你成功啦</p>
-<p>  <img src="%5CD:%5Cgithub%5Cblog%5Cpictures%5C%E5%A4%9A%E4%BA%86%E8%BE%A3%E5%A0%86%E4%B8%9C%E8%A5%BF" alt="多滴"></p>
+<p>  <img src="./assets/1.png" alt="多滴"></p>
 <h3 id="third"><a href="#third" class="headerlink" title="third"></a><strong>third</strong></h3><h4 id="搭桥到github"><a href="#搭桥到github" class="headerlink" title="搭桥到github"></a>搭桥到github</h4><p>  第一步 <del>登录你的github</del><br>  创建一个 new repository (就是新储存库啦)</p>
+<p>  <img src="./assets/3.png" alt=""></p>
 <p>  然后 新库的名字叫 yourname.github.io<br>  (不是输入yourname 这个地方是你的github名字嗷)</p>
+<p>  <img src="./assets/2.png" alt=" "></p>
 <p>  然后创建就好</p>
 <p>  之后 再回到我们的<del>万恶的</del> 可爱的Bash</p>
 <h3 id="fourth"><a href="#fourth" class="headerlink" title="fourth"></a><strong>fourth</strong></h3><h4 id="配置-github"><a href="#配置-github" class="headerlink" title="配置 github"></a>配置 github</h4><p> 输入： <code>git config --global user.name &quot;yourname&quot;</code></p>
@@ -253,8 +258,12 @@
 <p> 然后我们就去寻找生成的这个<del>鬼玩意</del></p>
 <p>输入： <code>cd ~/.ssh</code></p>
 <p>然后输入：<code>cat id_rsa.pub</code> 就会看到你的密钥</p>
-<p>然后点开你已经登录的github 点击你的头像旁边的辣个倒三角，然后点击setting（设置） 然后选择 SSH and GPG keys</p>
+<p>然后点开你已经登录的github 点击你的头像旁边的辣个倒三角</p>
+<p><img src="./assets/6.png" alt=" "></p>
+<p>然后点击setting（设置） 然后选择 SSH and GPG keys</p>
+<p><img src="./assets/4.png" alt=" "></p>
 <p>点击 new SSH key title 随便填 然后把那个刚刚找到的密钥 粘贴过来 然后点击 add ssh key 就OK啦</p>
+<p><img src="./assets/5.png" alt=" "></p>
 <p>然后继续回到Bash 输入：<code>ssh -git@github.com</code> 如果不报错 则说明成功</p>
 <h3 id="fifth"><a href="#fifth" class="headerlink" title="fifth"></a><strong>fifth</strong></h3><p> 打开你的博客文件夹 然后用编译器打开  _config.yml 文件(我用的是vscode)</p>
 <p> 然后修改文件内容 应该是在文件最后</p>

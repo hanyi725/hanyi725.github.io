@@ -15,7 +15,7 @@
 <meta property="og:description" content="1.标题：用#来表示，几个#就是几级标题  注：标准语法是要在#后加空格的 2.字体加粗：用俩*  **xxx** 输出：xxx 斜体： 用一*   *x*  输出：x 斜体加粗： 用三*（1+2&#x3D;3？）  ***xxx***  输出：xxxx 删除线： 俩~  ~~xxx~~  输出：xxxx 3.引用 搞不懂干啥的   用法是:&gt;xxxxxxx 可以一直&gt;&gt;&gt;&gt;&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-04T07:57:51.000Z">
-<meta property="article:modified_time" content="2020-05-04T09:38:44.507Z">
+<meta property="article:modified_time" content="2020-05-04T14:02:26.269Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -108,7 +108,10 @@
 <h1 id="4-分割线："><a href="#4-分割线：" class="headerlink" title="4.分割线："></a>4.分割线：</h1><p>用一溜- 或者*表示（大于等于三个）</p>
 <h1 id="5-图片"><a href="#5-图片" class="headerlink" title="5.图片"></a>5.图片</h1><h2 id="基础语法："><a href="#基础语法：" class="headerlink" title="基础语法："></a>基础语法：</h2><p> ![Alt text](图片链接 “optional title”)</p>
 <p> alt text:图片描述 可写可不写</p>
-<h2 id="插入本地图片："><a href="#插入本地图片：" class="headerlink" title="插入本地图片："></a>插入本地图片：</h2><p> 在括号里写图片路径就完事 但是不好分享不好更改 如果不小心图片不在那里了 你的显示就GG了</p>
+<h2 id="插入本地图片："><a href="#插入本地图片：" class="headerlink" title="插入本地图片："></a>插入本地图片：</h2><p> 先在source/_posts 下新建一个asset 文件夹 然后把图片存进去</p>
+<p> 插入语法：</p>
+<p> ![alt text](./assets/图片名字.png)</p>
+<p> 在括号里写图片相对路径就完事 但是不好分享不好更改 如果不小心图片不在那里了 你的显示就GG了</p>
 <h2 id="插入网络图片："><a href="#插入网络图片：" class="headerlink" title="插入网络图片："></a>插入网络图片：</h2><p> 在括号里也是写图片链接 但是比较依赖网络 人家要是没了 显示自然就没了</p>
 <p> 把图片存入markdown文件：（这个比较好 需要用Python）</p>
 <p> 就是把图片转成base64再转回来，</p>
