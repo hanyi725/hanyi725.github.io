@@ -14,11 +14,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="首先要完成准备工作  安装git 安装node js 注册github  git 下载地址：git 下载 安装：一路next就OK node 下载地址：node js 下载 安装：一路next 但是在Costom Setup这一步选一下 Add TO Path 这样就不用配置环境变量了 PS：装完之后不放心的话 就在cmd中输入path康康有没有这个路径 没有的话 俺没办法 自己解决叭 说明：LT">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/05/04/ok/%5CD:%5Cgithub%5Cblog%5Cpictures%5C%E5%A4%9A%E4%BA%86%E8%BE%A3%E5%A0%86%E4%B8%9C%E8%A5%BF">
 <meta property="article:published_time" content="2020-05-04T07:53:28.000Z">
-<meta property="article:modified_time" content="2020-05-04T13:19:15.828Z">
+<meta property="article:modified_time" content="2020-05-04T13:35:49.771Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/04/ok/%5CD:%5Cgithub%5Cblog%5Cpictures%5C%E5%A4%9A%E4%BA%86%E8%BE%A3%E5%A0%86%E4%B8%9C%E8%A5%BF">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -119,6 +121,7 @@
 <p>  等待安装好以后 输入 <code>hexo -v</code> 查看hexo版本</p>
 <p>  之后输入：<code>hexo init</code> 初始化 hexo </p>
 <p>  这个完成后 打开辣个你喜欢的文件夹(其实就是你的博客文件夹) 就可以看到里面多了一堆东西 就说明你成功啦</p>
+<p>  <img src="%5CD:%5Cgithub%5Cblog%5Cpictures%5C%E5%A4%9A%E4%BA%86%E8%BE%A3%E5%A0%86%E4%B8%9C%E8%A5%BF" alt="多滴"></p>
 <h3 id="third"><a href="#third" class="headerlink" title="third"></a><strong>third</strong></h3><h4 id="搭桥到github"><a href="#搭桥到github" class="headerlink" title="搭桥到github"></a>搭桥到github</h4><p>  第一步 <del>登录你的github</del><br>  创建一个 new repository (就是新储存库啦)</p>
 <p>  然后 新库的名字叫 yourname.github.io<br>  (不是输入yourname 这个地方是你的github名字嗷)</p>
 <p>  然后创建就好</p>
@@ -138,14 +141,17 @@
 <h3 id="fifth"><a href="#fifth" class="headerlink" title="fifth"></a><strong>fifth</strong></h3><p> 打开你的博客文件夹 然后用编译器打开  _config.yml 文件(我用的是vscode)</p>
 <p> 然后修改文件内容 应该是在文件最后</p>
 <p> 修改：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> repo: https:&#x2F;&#x2F;github.com&#x2F;YourgithubName&#x2F;YourgithubName.github.io.git</span><br><span class="line"> branch: master</span><br></pre></td></tr></table></figure><br>  yourname 依然是你的github名字 不要觉得复制粘贴就完事嗷</p>
-<p>  之后 一如既往 回到git bash<br>  输入命令：<code>npm i hexo-server</code>(hexo 在3.0以下的不用输入)</p>
-<p>  然后：</p>
+<p>  之后 一如既往 回到git bash </p>
+<p>  先cd 回你的博客文件夹去</p>
+<p>  然后</p>
+<p>  输入命令：<code>npm i hexo-server</code>(hexo 在3.0以下的不用输入)</p>
+<p>  再然后：</p>
 <pre><code>输入  `hexo clean`
 
 输入：`hexo generate`
 
 输入：`hexo deploy`</code></pre><p>之后在浏览器中输入：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 你就可以看到你的博客亚子了，但是不要着急 我们的故事仍在继续······</p>
-<h1 id="继续"><a href="#继续" class="headerlink" title="继续"></a>继续</h1><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><ul>
+<h1 id="继续"><a href="#继续" class="headerlink" title="继续"></a>继续</h1><ul>
 <li><p>把你的博客上传到github</p>
 <p>回到 gitbash 输入命令：</p>
 <p><code>npm install hexo-deployer-git --save</code></p>
