@@ -86,13 +86,100 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="1-标题："><a href="#1-标题：" class="headerlink" title="1.标题："></a>1.标题：</h1><p>用#来表示，几个#就是几级标题</p>
+<p> 注：标准语法是要在#后加空格的</p>
+<h1 id="2-字体"><a href="#2-字体" class="headerlink" title="2.字体"></a>2.字体</h1><h3 id="加粗："><a href="#加粗：" class="headerlink" title="加粗："></a>加粗：</h3><p>用俩* </p>
+<p>**xxx**</p>
+<p>输出：<strong>xxx</strong></p>
+<h3 id="斜体："><a href="#斜体：" class="headerlink" title="斜体："></a>斜体：</h3><p> 用一* </p>
+<p> *x*</p>
+<p> 输出：<em>x</em></p>
+<h3 id="斜体加粗："><a href="#斜体加粗：" class="headerlink" title="斜体加粗："></a>斜体加粗：</h3><p> 用三*（1+2=3？） </p>
+<p>***xxx***</p>
+<p> 输出：<strong><em>xxxx</em></strong></p>
+<h3 id="删除线："><a href="#删除线：" class="headerlink" title="删除线："></a>删除线：</h3><p> 俩~ </p>
+<p>~~xxx~~</p>
+<p> 输出：<del>xxxx</del></p>
+<h1 id="3-引用"><a href="#3-引用" class="headerlink" title="3.引用"></a>3.引用</h1><p> 搞不懂干啥的 </p>
+<p> 用法是:&gt;xxxxxxx<br> 可以一直&gt;&gt;&gt;&gt;&gt;下去 不过真不知道有哈用</p>
+<h1 id="4-分割线："><a href="#4-分割线：" class="headerlink" title="4.分割线："></a>4.分割线：</h1><p>用一溜- 或者*表示（大于等于三个）</p>
+<h1 id="5-图片"><a href="#5-图片" class="headerlink" title="5.图片"></a>5.图片</h1><h2 id="基础语法："><a href="#基础语法：" class="headerlink" title="基础语法："></a>基础语法：</h2><p> ![Alt text](图片链接 “optional title”)</p>
+<p> alt text:图片描述 可写可不写</p>
+<h2 id="插入本地图片："><a href="#插入本地图片：" class="headerlink" title="插入本地图片："></a>插入本地图片：</h2><p> 在括号里写图片路径就完事 但是不好分享不好更改 如果不小心图片不在那里了 你的显示就GG了</p>
+<h2 id="插入网络图片："><a href="#插入网络图片：" class="headerlink" title="插入网络图片："></a>插入网络图片：</h2><p> 在括号里也是写图片链接 但是比较依赖网络 人家要是没了 显示自然就没了</p>
+<p> 把图片存入markdown文件：（这个比较好 需要用Python）</p>
+<p> 就是把图片转成base64再转回来，</p>
+<p> 按道理来说 要写到辣个括号里面 但是吧从一个颜控（划掉 改为实用）的角度来看 很丑的 一般情况下用一个id代替一下下，会看起来舒服很多，</p>
+<h3 id="举个栗子："><a href="#举个栗子：" class="headerlink" title="举个栗子："></a>举个栗子：</h3><p> ![avatar][hhh]</p>
+<p> \ [hhh]:data:image/png;base64,sdhjiSH….. (编的 别信)</p>
+<p> emmmmm 问怎么转base64？俺也不知道 知道也不说</p>
+<p> （Python：）</p>
+<p> 图片转编码</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import base64</span><br><span class="line">f&#x3D;open(&#39;723.png&#39;,&#39;rb&#39;) #二进制方式打开图文件</span><br><span class="line">ls_f&#x3D;base64.b64encode(f.read()) #读取文件内容，转换为base64编码</span><br><span class="line">f.close()</span><br><span class="line">print(ls_f)</span><br></pre></td></tr></table></figure>
+
+<p>编码转图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import base64</span><br><span class="line">bs&#x3D;&#39;iVBORw0KGgoAAAANSUhEUg....&#39; # 太长了不想编了</span><br><span class="line">imgdata&#x3D;base64.b64decode(bs)</span><br><span class="line">file&#x3D;open(&#39;2.jpg&#39;,&#39;wb&#39;)</span><br><span class="line">file.write(imgdata)</span><br><span class="line">file.close()</span><br></pre></td></tr></table></figure>
+
+<h1 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6.超链接"></a>6.超链接</h1><p>格式：[超链接名](超链接地址 “超链接title”)</p>
+<p>一样 title 可加可不加</p>
+<p>举个板栗：[简书](<a href="http://jianshu.com" target="_blank" rel="noopener">http://jianshu.com</a>)</p>
+<h1 id="7-代码："><a href="#7-代码：" class="headerlink" title="7.代码："></a>7.代码：</h1><p>单行代码：用一个反引号包住 `</p>
+<p>多行代码：用```包住，两个```分别占一行</p>
+<p>注 反引号在哪：tab键上方</p>
+<h1 id="8-防编译"><a href="#8-防编译" class="headerlink" title="8.防编译"></a>8.防编译</h1><p>要在markdown中输出* # 这些有编译意义的符号 需要在符号前面加<br>可以拓展 不想让编译的全加\就行</p>
+<h1 id="9-列表"><a href="#9-列表" class="headerlink" title="9.列表"></a>9.列表</h1><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>无序列表用 - + * 任何一种都可以<br>举个栗子：</p>
+<pre><code>\+ 你是小可爱
+
+\- 我是小可爱
+
+\* 我们在一起吧
+
+注意：符号和内容直接要有空格</code></pre><p>输出：</p>
+<ul>
+<li>你是小可爱</li>
+</ul>
+<ul>
+<li>我是小可爱</li>
+</ul>
+<ul>
+<li>我们在一起吧<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3>数字加点加空格加内容</li>
+</ul>
+<p>1.你是小可爱</p>
+<p>2.我是小可爱</p>
+<p>3.不 你不是</p>
+<p>输出：</p>
+<ol>
+<li><p>你是小可爱</p>
+</li>
+<li><p>我是小可爱</p>
+</li>
+<li><p>不 你不是</p>
+</li>
+</ol>
+<p> 然后多级列表比上一级多敲三空格就OK</p>
+<ol>
+<li>你是谁<ol>
+<li>我是谁</li>
+<li>不知道</li>
+</ol>
+</li>
+<li>你是谁<ol>
+<li>不告诉你</li>
+<li>你猜啊</li>
+</ol>
+</li>
+</ol>
+<p>一定要记得空格！！！</p>
+<h1 id="10-表格和流程图"><a href="#10-表格和流程图" class="headerlink" title="10. 表格和流程图"></a>10. 表格和流程图</h1><p>略</p>
+
       
     </div>
     <footer class="article-footer">
       <a data-url="http://yoursite.com/2020/05/04/markdown/" data-id="ck9s6yuw70000o0prhxqp86ak" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+
     </footer>
   </div>
   
@@ -195,9 +282,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">笔记</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
