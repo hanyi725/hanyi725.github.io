@@ -1264,7 +1264,7 @@ article .content .caption {
   right: 0px;
   top: 0px;
   bottom: 0px;
-  background: transparent url("../images/shadow.jpg") 0% 0% no-repeat;
+  background: transparent url("../images/shadow.png") 0% 0% no-repeat;
   background-size: cover;
   border-radius: 100%;
 }
