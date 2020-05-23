@@ -1,194 +1,73 @@
-<!DOCTYPE html>
-<html lang=en>
+<html>
+
 <head>
-    <!-- so meta -->
     <meta charset="utf-8">
+    
+    <title>简单hexo搭建（没有换主题） | Hexo</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="首先要完成准备工作  安装git 安装node js 注册github  git 下载地址：git 下载 安装：一路next就OK node 下载地址：node js 下载 安装：一路next 但是在Costom Setup这一步选一下 Add TO Path 这样就不用配置环境变量了 PS：装完之后不放心的话 就在cmd中输入path康康有没有这个路径 没有的话 俺没办法 自己解决叭 说明：LT">
-<meta property="og:type" content="article">
-<meta property="og:title" content="简单hexo搭建（没有换主题）">
-<meta property="og:url" content="http://yoursite.com/2020/05/04/ok/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="首先要完成准备工作  安装git 安装node js 注册github  git 下载地址：git 下载 安装：一路next就OK node 下载地址：node js 下载 安装：一路next 但是在Costom Setup这一步选一下 Add TO Path 这样就不用配置环境变量了 PS：装完之后不放心的话 就在cmd中输入path康康有没有这个路径 没有的话 俺没办法 自己解决叭 说明：LT">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.loli.net/2020/05/04/gmbC5So1UWMLxcP.png">
-<meta property="og:image" content="https://i.loli.net/2020/05/04/5qTrNUufBv8RMSp.png">
-<meta property="og:image" content="https://i.loli.net/2020/05/04/fimZzhjyPYE3CJt.png">
-<meta property="og:image" content="https://i.loli.net/2020/05/04/ZlPWNCAnKXViRkp.png">
-<meta property="og:image" content="https://i.loli.net/2020/05/04/169XFuKUNjRDqbi.png">
-<meta property="og:image" content="https://i.loli.net/2020/05/04/rGldLTCIwe4DBE5.png">
-<meta property="article:published_time" content="2020-05-04T07:53:28.000Z">
-<meta property="article:modified_time" content="2020-05-04T14:37:32.247Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="笔记">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2020/05/04/gmbC5So1UWMLxcP.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon/favicon.ico">
     
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-          
-        
-    
-    <!-- title -->
-    <title>简单hexo搭建（没有换主题）</title>
-    <!-- styles -->
-    
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/main.css">
 
     
-<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/css/tagplugins.css">
 
     
-<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+<link rel="stylesheet" href="/css/highlight.css">
 
     
-<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- rss -->
     
     
-    <!-- jquery -->
+      <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
     
-<script src="/lib/jquery/jquery.min.js"></script>
-
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
-    <div class="banner">
-<div id="blogtitel" class="blogtitel">Hexo</div>
-<ul id="wrapper" class="wrapper">
-  <div class="sun">
-    <div class="star"></div>
-  </div>
-  <div class="mercury">
-    <div class="planet">
-      <div class="shadow"></div>
-    </div>
-  </div>
-  <div class="venus">
-    <div class="planet">
-      <div class="shadow"></div>
-    </div>
-  </div>
-  <div class="earth">
-    <div class="planet"><div class="shadow"></div></div>
-  </div>
-  <div class="mars">
-    <div class="planet"><div class="shadow"></div></div>
-  </div>
-  <div class="jupiter">
-    <div class="planet"><div class="shadow"></div></div>
-  </div>
-</ul>
+  <div class="blog-header">
+   <a id="menu-nav-icon"><img src="/image/menu.png"/></a>
+   <div class="nav-container">
+     <nav id="main-nav">
+       
+         <a class="main-nav-link" href="/">Home</a>
+       
+         <a class="main-nav-link" href="/archives">Archives</a>
+       
+     </nav>
+   </div>
+   <!--
+   <div id="search-form-wrap">
+     <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+   </div>
+ -->
+    <h1 class="blog-title">Hexo</h1>
+    <p class="lead blog-description"></p>
 </div>
 
-    <div class="background">
-      
-        <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/home/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="http://github.com/tzvetkov75" target="_blank" rel="noopener">Projects</a></li>
-        
-      </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/2020/05/04/markdown/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
-        
-        
-        <li><a class="icon" href="/2020/05/04/hello-world/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/04/ok/" target="_blank" rel="noopener"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/04/ok/&text=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/04/ok/&title=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/04/ok/&is_video=false&description=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=简单hexo搭建（没有换主题）&body=Check out this article: http://yoursite.com/2020/05/04/ok/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/04/ok/&title=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/04/ok/&title=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/04/ok/&title=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/04/ok/&title=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/04/ok/&name=简单hexo搭建（没有换主题）&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#首先"><span class="toc-number">1.</span> <span class="toc-text">首先</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#然后"><span class="toc-number">2.</span> <span class="toc-text">然后</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#打开你的git-bash"><span class="toc-number">2.1.</span> <span class="toc-text">打开你的git bash</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始表演"><span class="toc-number">2.2.</span> <span class="toc-text">开始表演</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#First"><span class="toc-number">2.2.1.</span> <span class="toc-text">First</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Second"><span class="toc-number">2.2.2.</span> <span class="toc-text">Second</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建hexo"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">创建hexo</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#third"><span class="toc-number">2.2.3.</span> <span class="toc-text">third</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#搭桥到github"><span class="toc-number">2.2.3.1.</span> <span class="toc-text">搭桥到github</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fourth"><span class="toc-number">2.2.4.</span> <span class="toc-text">fourth</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#配置-github"><span class="toc-number">2.2.4.1.</span> <span class="toc-text">配置 github</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成ssh"><span class="toc-number">2.2.4.2.</span> <span class="toc-text">生成ssh</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fifth"><span class="toc-number">2.2.5.</span> <span class="toc-text">fifth</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#继续"><span class="toc-number">3.</span> <span class="toc-text">继续</span></a></li></ol>
-    </div>
-  </span>
-</div>
-
-      
-      <div class="content index width mx-auto px2 my4">
-          
-          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    
-    <h1 class="posttitle" itemprop="name headline">
-        简单hexo搭建（没有换主题）
+  <div id='main-part'>
+      <div class="main">
+<div class="blog-post">
+    <!-- Title -->
+    <h1 class="blog-post-title">
+        <a href="/2020/05/04/ok/">
+            简单Hexo搭建（没有换主题）
+        </a>
     </h1>
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+        2020-05-04
+        
+    </p>
 
+    
 
-
-    <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">Hexo</span>
-      </span>
-      
-    <div class="postdate">
-        <time datetime="2020-05-04T07:53:28.000Z" itemprop="datePublished">2020-05-04</time>
-    </div>
-
-
-      
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a>
-    </div>
-
-
-    </div>
-  </header>
-  
-
-  <div class="content" itemprop="articleBody">
+    <!-- Content -->
     <h1 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h1><p>要完成准备工作</p>
 <ol>
 <li>安装git</li>
@@ -273,95 +152,94 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 <p>然后刷新你的博客 你就会非常有成就感23333</p>
 
+
+    <!-- Social share choices -->
+    
+  <div id="social-share">
+    <a data-url="http://yoursite.com/2020/05/04/ok/" href="https://plus.google.com/share?url=" target="_blank" rel="noopener" class="googleplus"><img src="/image/googleplusicon.png" alt=""/></a>
+    <a data-url="http://yoursite.com/2020/05/04/ok/" href="https://twitter.com/intent/tweet?url=" target="_blank" rel="noopener" class="twitter"><img src="/image/twittericon.png" alt=""/></a>
+    <a data-url="http://yoursite.com/2020/05/04/ok/" href="http://pinterest.com/pin/create/button/?url=" target="_blank" rel="noopener" class="pinterest"><img src="/image/pinteresticon.png" alt=""/></a>
+    <a data-url="http://yoursite.com/2020/05/04/ok/" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener" class="facebook"><img src="/image/facebookicon.png" alt=""/></a>
   </div>
-</article>
 
 
 
-      </div>
-      
-       <div id="footer-post-container">
-  <div id="footer-post">
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/home/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="http://github.com/tzvetkov75" target="_blank" rel="noopener">Projects</a></li>
-        
-      </ul>
-    </div>
 
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#首先"><span class="toc-number">1.</span> <span class="toc-text">首先</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#然后"><span class="toc-number">2.</span> <span class="toc-text">然后</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#打开你的git-bash"><span class="toc-number">2.1.</span> <span class="toc-text">打开你的git bash</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始表演"><span class="toc-number">2.2.</span> <span class="toc-text">开始表演</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#First"><span class="toc-number">2.2.1.</span> <span class="toc-text">First</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Second"><span class="toc-number">2.2.2.</span> <span class="toc-text">Second</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建hexo"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">创建hexo</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#third"><span class="toc-number">2.2.3.</span> <span class="toc-text">third</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#搭桥到github"><span class="toc-number">2.2.3.1.</span> <span class="toc-text">搭桥到github</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fourth"><span class="toc-number">2.2.4.</span> <span class="toc-text">fourth</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#配置-github"><span class="toc-number">2.2.4.1.</span> <span class="toc-text">配置 github</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成ssh"><span class="toc-number">2.2.4.2.</span> <span class="toc-text">生成ssh</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fifth"><span class="toc-number">2.2.5.</span> <span class="toc-text">fifth</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#继续"><span class="toc-number">3.</span> <span class="toc-text">继续</span></a></li></ol>
-    </div>
+<!--
 
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/04/ok/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/04/ok/&text=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/04/ok/&title=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/04/ok/&is_video=false&description=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=简单hexo搭建（没有换主题）&body=Check out this article: http://yoursite.com/2020/05/04/ok/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/04/ok/&title=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/04/ok/&title=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/04/ok/&title=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/04/ok/&title=简单hexo搭建（没有换主题）" target="_blank" rel="noopener"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/04/ok/&name=简单hexo搭建（没有换主题）&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-</ul>
 
-    </div>
+https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/05/04/ok/
+http://yoursite.com/2020/05/04/ok/
+-->
 
-    <div id="actions-footer">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
-        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
-      </ul>
-    </div>
 
-  </div>
+
+    <hr />
+
+
+    <!-- Tags and Categories links -->
+    
+
+    
+
+
+<div class="blog-tags-container">
+    <span><img src="/image/tagsicon.png" alt=""/></span>
+    <a href="/tags/笔记/">#笔记</a>
 </div>
 
-      
-      <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy; 2020 John Doe
-  </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/home/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/archives/">Writing</a></li>
-         
-          <li><a href="http://github.com/tzvetkov75" target="_blank" rel="noopener">Projects</a></li>
-        
-      </ul>
-    </nav>
-  </div>
-</footer>
 
-      
-<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
 
+    <!-- Comment using disqus -->
+    
+
+</div>
+</div>
+
+
+  </div>
+  <!-- Footer -->
+  <div id="footer">
+  <div id="footer-social">
+    
+    
+    
+    
+    
+    
+</div>
+
+  <p id="footer-info">
+    &copy; 2020 John Doe<br>
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> -
+    Theme <a href="https://github.com/Suolawangzai/hexo-theme-nebula" target="_blank">nebula</a>
+  </p>
+
+  <div id="busuanzi">
+    <span id="busuanzi_container_site_pv">
+      &hearts;
+    Total visits: <span id="busuanzi_value_site_pv"></span>
+    </span>
+  </div>
+  <!--
+  <div id="footer-info">
+    &copy; 2020 John Doe<br>
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+  </div>
+-->
+</div>
+
+  <!-- After footer scripts -->
+  <!-- Disqus Comments -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <script src="/js/main.js"></script>
 
-<!-- Google Analytics -->
 
-<!-- Disqus Comments -->
-
-
-    </div>
 </body>
+
 </html>

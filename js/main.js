@@ -1,105 +1,110 @@
-if (!!$.prototype.justifiedGallery) { // if justifiedGallery method is defined
-    var options = {
-        rowHeight: 140,
-        margins: 4,
-        lastRow: 'justify'
-    };
-    $('.article-gallery').justifiedGallery(options);
-}
+$(function(){
 
-
-$(window).load(function() {
-    
-       $("#wrapper").fadeTo("slow",1);
-       $("#blogtitel").fadeOut(2000);
-});
-
-$(document).ready(function() {
-
-
-    $(window).on('scroll', function() {
-
-        var z = $(".banner")[0].getBoundingClientRect().bottom / (
-            $(".banner")[0].getBoundingClientRect().bottom - $(".banner")[0].getBoundingClientRect().top)
-
-        if (z < 0) {
-            z = 0.01
-        }
-
-        $(".wrapper")[0].style.zoom = z
-        $(".wrapper")[0].style.MozTransform = "scale(" + z + ")"
-
-    });
-
-    $("#menu-icon, #menu-icon-tablet").click(function() {
-        if ($('#menu').css('visibility') == 'hidden') {
-            $('#menu').css('visibility', 'visible');
-            $('#menu-icon, #menu-icon-tablet').addClass('active');
-
-            var topDistance = $("#menu > #nav").offset().top;
-
-            $("#menu > #nav").show();
-            return false;
-        } else {
-            $('#menu').css('visibility', 'hidden');
-            $('#menu-icon, #menu-icon-tablet').removeClass('active');
-
-            return false;
-        }
-    });
-
-    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-    $("#header > #nav > ul > .icon").click(function() {
-        $("#header > #nav > ul").toggleClass("responsive");
-    });
-
-    if ($("#menu").length) {
-        $(window).on('scroll', function() {
-            var topDistance = $(window).scrollTop();
-
-            if ($('#menu').css('visibility') != 'hidden' && topDistance < 10) {
-                $("#menu > #nav").show();
-            } else if ($('#menu').css('visibility') != 'hidden' && topDistance > 10) {
-                $("#menu > #nav").hide();
-            }
-
-            if (!$("#menu-icon").is(":visible") && topDistance < 10) {
-
-                $("#menu-icon-tablet").show();
-                $("#top-icon-tablet").hide();
-            } else if (!$("#menu-icon").is(":visible") && topDistance > 10) {
-
-                $("#menu-icon-tablet").hide();
-                $("#top-icon-tablet").show();
-            }
-        });
+  /* Drop-down menu */
+  $('#menu-nav-icon').click(function(){
+    $('#main-nav').slideToggle()
+  })
+  $(window).on('resize', function (){
+    if ($(window).width() > 768){
+        $('#main-nav').show();
+    }else{
+        $('#main-nav').hide();
     }
+  });
 
-    if ($("#footer-post").length) {
-        var lastScrollTop = 0;
-        $(window).on('scroll', function() {
-            var topDistance = $(window).scrollTop();
+  /* Share */
+  var shares = $("#social-share").children();
+  var url = shares.first().attr('data-url');
+  var encodedUrl = encodeURIComponent(url)
 
-            if (topDistance > lastScrollTop) {
-                // downscroll code
-                $("#footer-post").hide();
-            } else {
-                // upscroll code
-                $("#footer-post").show();
-            }
-            lastScrollTop = topDistance;
+  shares.each(function(){
+     this.href += encodedUrl;
+  })
 
-            $("#nav-footer").hide();
-            $("#toc-footer").hide();
-            $("#share-footer").hide();
+  /* Gallery Display */
+  // Get a list of gallery ids
+  var slideIndices = {};
+  var galleries = $('.gallery');
+  //console.log(galleries);
+  //console.log(galleries[0]);
 
-            if (topDistance < 50) {
-                $("#actions-footer > ul > #top").hide();
-                $("#actions-footer > ul > #menu").show();
-            } else if (topDistance > 100) {
-                $("#actions-footer > ul > #menu").hide();
-                $("#actions-footer > ul > #top").show();
-            }
-        });
-    }
-});
+  $('.gallery').each(function(index){
+    //console.log( index + ": " + $( this ).attr("id") );
+    slideIndices[$(this).attr("id")] = 1;
+  });
+  //console.log(slideIndices);
+
+  galleries.each(function(){
+    showSlides($(this).attr("id"), 1);
+  })
+
+
+  function showSlides(id, n) {
+    galleries.each(function(){
+      var that = $(this);
+      if(that.attr("id") == id){
+        var slides = that.find('.mySlides');
+        var dots = that.find('.demo');
+        var captionText = that.find('.caption');
+        console.log("Slide length is " + slides.length);
+        if (n > slides.length){
+          slideIndices[id] = 1;
+          n = 1;
+        }
+        if (n < 1){
+          slideIndices[id] = slides.length;
+          n = slides.length;
+        }
+        console.log("n is "+ n);
+        slides.each(function(index){
+          if(index == (n-1)){
+            console.log("here");
+            $(this).css({"display": "block"});
+          }else{
+            $(this).css({"display": "none"});
+          }
+        })
+        dots.each(function(index){
+          if(index == (n-1)){
+            $(this).addClass("display");
+          }else{
+            $(this).removeClass("display");
+          }
+        })
+        var capText = $(dots[slideIndices[id]]).attr("alt");
+        try{
+          capText = capText.split('/').pop().replace(/\.[^/.]+$/, "");
+        }catch(e){
+          capText = $(dots[slideIndices[id]]).attr("alt");
+        }
+        captionText.html(capText);
+      }
+    })
+  }
+
+   /* install event function */
+   $(".gallery .columns .column img").each(function(){
+     $(this).click(function(){
+       var key = $(this).attr("data-id");
+       var num = $(this).attr("data-num");
+       showSlides(key, slideIndices[key] = num);
+     })
+   });
+
+   galleries.each(function(){
+     $(this).find(".prev").click(function(){
+       var key = $(this).attr("data-id");
+       slideIndices[key] -=1;
+       console.log("Index is " +  slideIndices[key]);
+       showSlides(key, slideIndices[key]);
+     })
+   })
+   galleries.each(function(){
+     $(this).find(".next").click(function(){
+       var key = $(this).attr("data-id");
+       slideIndices[key] +=1;
+       console.log("Index is " +  slideIndices[key]);
+       showSlides(key, slideIndices[key]);
+     })
+   })
+})
