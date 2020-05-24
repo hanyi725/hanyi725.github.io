@@ -6,15 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="article">
-<meta property="og:title" content="wp">
+    <meta name="description" content="1.web2打开就是满屏的滑稽 然后毫无提示 于是查看源码 在源码中发现flag得到：flag KEY{Web-2-bugKssNNikls9100} 2.计算器打开发现是一道小学数学题答案当然是93然后很开心的输入 问题来了 只能输入一位数。。。 于是F12这里说明只能输入一位数 于是改成2（比1大都可以）然后输入93 然后验证得到：flag{CTF-bugku-0032} 3.web基础$_G">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bugku web 1-12">
 <meta property="og:url" content="http://yoursite.com/2020/05/24/wp-1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.web2打开就是满屏的滑稽 然后毫无提示 于是查看源码 在源码中发现flag得到：flag KEY{Web-2-bugKssNNikls9100} 2.计算器打开发现是一道小学数学题答案当然是93然后很开心的输入 问题来了 只能输入一位数。。。 于是F12这里说明只能输入一位数 于是改成2（比1大都可以）然后输入93 然后验证得到：flag{CTF-bugku-0032} 3.web基础$_G">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/Yz9by8.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YzCJkd.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YzCWcV.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YzCvnO.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YzP6bD.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YziJzt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YzFP6P.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YzkiC9.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YzkYb8.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YzmbZt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YznSMj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/Yzu5DA.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YzRqiR.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YzHa7V.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/24/YzqedP.png">
 <meta property="article:published_time" content="2020-05-24T02:01:08.000Z">
-<meta property="article:modified_time" content="2020-05-24T02:01:08.384Z">
+<meta property="article:modified_time" content="2020-05-24T07:36:58.234Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/24/Yz9by8.png">
     
     
         
@@ -34,7 +53,7 @@
         
     
     <!-- title -->
-    <title>wp</title>
+    <title>bugku web 1-12</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
@@ -125,20 +144,20 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/24/wp-1/" target="_blank" rel="noopener"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/24/wp-1/&text=wp" target="_blank" rel="noopener"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/24/wp-1/&title=wp" target="_blank" rel="noopener"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/24/wp-1/&is_video=false&description=wp" target="_blank" rel="noopener"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=wp&body=Check out this article: http://yoursite.com/2020/05/24/wp-1/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/24/wp-1/&title=wp" target="_blank" rel="noopener"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=wp" target="_blank" rel="noopener"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=wp" target="_blank" rel="noopener"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=wp" target="_blank" rel="noopener"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/24/wp-1/&name=wp&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/24/wp-1/&text=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/24/wp-1/&title=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/24/wp-1/&is_video=false&description=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=bugku web 1-12&body=Check out this article: http://yoursite.com/2020/05/24/wp-1/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/24/wp-1/&title=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/24/wp-1/&name=bugku web 1-12&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-web2"><span class="toc-number">1.</span> <span class="toc-text">1.web2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-计算器"><span class="toc-number">2.</span> <span class="toc-text">2.计算器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-web基础-GET"><span class="toc-number">3.</span> <span class="toc-text">3.web基础$_GET</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-web基础-POST"><span class="toc-number">4.</span> <span class="toc-text">4.web基础$_POST</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-矛盾"><span class="toc-number">5.</span> <span class="toc-text">5.矛盾</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-web3"><span class="toc-number">6.</span> <span class="toc-text">6.web3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-域名解析"><span class="toc-number">7.</span> <span class="toc-text">7.域名解析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-你必须让他停下"><span class="toc-number">8.</span> <span class="toc-text">8.你必须让他停下</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-变量1"><span class="toc-number">9.</span> <span class="toc-text">9.变量1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-web5"><span class="toc-number">10.</span> <span class="toc-text">10.web5</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-头等舱"><span class="toc-number">11.</span> <span class="toc-text">11.头等舱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PS-还有一个题是本地包含-但是貌似出问题了-我一直打不开"><span class="toc-number">11.0.1.</span> <span class="toc-text">PS: 还有一个题是本地包含 但是貌似出问题了 我一直打不开</span></a></li></ol></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -150,7 +169,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        wp
+        bugku web 1-12
     </h1>
 
 
@@ -166,13 +185,38 @@
 
 
       
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a>
+    </div>
+
 
     </div>
   </header>
   
 
   <div class="content" itemprop="articleBody">
-    
+    <h1 id="1-web2"><a href="#1-web2" class="headerlink" title="1.web2"></a>1.web2</h1><p>打开就是满屏的滑稽 然后毫无提示 于是查看源码 在源码中发现flag<br><img src="https://s1.ax1x.com/2020/05/24/Yz9by8.png" alt="Yz9by8.png"><br>得到：flag KEY{Web-2-bugKssNNikls9100}</p>
+<h1 id="2-计算器"><a href="#2-计算器" class="headerlink" title="2.计算器"></a>2.计算器</h1><p>打开发现是一道小学数学题<br><img src="https://s1.ax1x.com/2020/05/24/YzCJkd.png" alt="YzCJkd.png"><br>答案当然是93<br>然后很开心的输入 问题来了 只能输入一位数。。。 于是F12<br><img src="https://s1.ax1x.com/2020/05/24/YzCWcV.png" alt="YzCWcV.png"><br>这里说明只能输入一位数 于是改成2（比1大都可以）<br>然后输入93 然后验证<br><a href="https://imgchr.com/i/YzCvnO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/24/YzCvnO.png" alt="YzCvnO.png"></a><br>得到：flag{CTF-bugku-0032}</p>
+<h1 id="3-web基础-GET"><a href="#3-web基础-GET" class="headerlink" title="3.web基础$_GET"></a>3.web基础$_GET</h1><p>打开之后是一段php代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$what&#x3D;$_GET[&#39;what&#39;];</span><br><span class="line">echo $what;</span><br><span class="line">if($what&#x3D;&#x3D;&#39;flag&#39;)</span><br><span class="line">echo &#39;flag&#123;****&#125;&#39;;</span><br></pre></td></tr></table></figure>
+<p>这段代码要求get what<br>于是输入 ？what=flag<br><a href="https://imgchr.com/i/YzP6bD" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/24/YzP6bD.png" alt="YzP6bD.png"></a><br>得到flag：flag{bugku_get_su8kej2en}</p>
+<h1 id="4-web基础-POST"><a href="#4-web基础-POST" class="headerlink" title="4.web基础$_POST"></a>4.web基础$_POST</h1><p>打开发现是和上题几乎一样的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$what&#x3D;$_POST[&#39;what&#39;];</span><br><span class="line">echo $what;</span><br><span class="line">if($what&#x3D;&#x3D;&#39;flag&#39;)</span><br><span class="line">echo &#39;flag&#123;****&#125;&#39;;</span><br></pre></td></tr></table></figure>
+<p>不过由get 改成了post 使用hackbar<br><img src="https://s1.ax1x.com/2020/05/24/YziJzt.png" alt="YziJzt.png"><br>得到flag:flag{bugku_get_ssseint67se}</p>
+<h1 id="5-矛盾"><a href="#5-矛盾" class="headerlink" title="5.矛盾"></a>5.矛盾</h1><p>打开依旧是php代码 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$num&#x3D;$_GET[&#39;num&#39;];</span><br><span class="line">if(!is_numeric($num))</span><br><span class="line">&#123;</span><br><span class="line">echo $num;</span><br><span class="line">if($num&#x3D;&#x3D;1)</span><br><span class="line">echo &#39;flag&#123;**********&#125;&#39;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>要get num 但是它不是1 却又得等于1 这里考察的是php弱语言类型<br>num=1s<br><img src="https://s1.ax1x.com/2020/05/24/YzFP6P.png" alt="YzFP6P.png"><br>得到flag：flag{bugku-789-ps-ssdf}</p>
+<h1 id="6-web3"><a href="#6-web3" class="headerlink" title="6.web3"></a>6.web3</h1><p>打开什么都没有 于是ctrl u 查看源码 在最下面发现一行被注释掉的数字<br><a href="https://imgchr.com/i/YzkiC9" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/24/YzkiC9.png" alt="YzkiC9.png"></a><br>于是转码<br><img src="https://s1.ax1x.com/2020/05/24/YzkYb8.png" alt="YzkYb8.png"><br>得到flag:KEY{J2sa42ahJK-HS11III}</p>
+<h1 id="7-域名解析"><a href="#7-域名解析" class="headerlink" title="7.域名解析"></a>7.域名解析</h1><p>点开看见一句话：听说把 flag.baidu.com 解析到123.206.87.240 就能拿到flag<br>用bp抓包修改host<br><img src="https://s1.ax1x.com/2020/05/24/YzmbZt.png" alt="YzmbZt.png"><br><img src="https://s1.ax1x.com/2020/05/24/YznSMj.png" alt="YznSMj.png"><br>然后发送<br>得到flag:KEY{DSAHDSJ82HDS2211}</p>
+<h1 id="8-你必须让他停下"><a href="#8-你必须让他停下" class="headerlink" title="8.你必须让他停下"></a>8.你必须让他停下</h1><p>点开发现是一个不断刷新的页面 联系题目 你必须让他停下来 于是禁用js 然后手动刷新 然后会发现这个页面：<br><img src="https://s1.ax1x.com/2020/05/24/Yzu5DA.png" alt="Yzu5DA.png"><br>得到flag:flag{dummy_game_1s_s0_popular}</p>
+<h1 id="9-变量1"><a href="#9-变量1" class="headerlink" title="9.变量1"></a>9.变量1</h1><p>打开是一段奇奇怪怪的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">flag In the variable ! &lt;?php  </span><br><span class="line"></span><br><span class="line">error_reporting(0);</span><br><span class="line">include &quot;flag1.php&quot;;</span><br><span class="line">highlight_file(__file__);</span><br><span class="line">if(isset($_GET[&#39;args&#39;]))&#123;</span><br><span class="line">    $args &#x3D; $_GET[&#39;args&#39;];</span><br><span class="line">    if(!preg_match(&quot;&#x2F;^\w+$&#x2F;&quot;,$args))&#123;</span><br><span class="line">        die(&quot;args error!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    eval(&quot;var_dump($$args);&quot;);</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>var_dump()函数 显示关于一个或多个表达式的结构信息，包括表达式的类型与值。数组将递归展开值，通过缩进显示其结构<br>if(!preg_match(“/^\w+$/“,$args))<br>正则表达式： /^开始, \w表示任意一个单词字符，即[a-zA-Z0-9_] ,+将前面的字符匹配一次或多次，$/结尾 也就是会过滤掉不是单词字符的东西<br>这个题要输入数组 但是正则会过滤掉括号 那就是要找一个不带括号的数组<br>那就只有GLOBALS<br>于是输入？args=GLOBALS<br><img src="https://s1.ax1x.com/2020/05/24/YzRqiR.png" alt="YzRqiR.png"><br>得到flag:flag{92853051ab894a64f7865cf3c2128b34}</p>
+<h1 id="10-web5"><a href="#10-web5" class="headerlink" title="10.web5"></a>10.web5</h1><p>打开发现是一个提交栏，日常查看源码 发现一堆奇奇怪怪的编码 （jother编码）<br>扔到谷歌控制台解码：<br><img src="https://s1.ax1x.com/2020/05/24/YzHa7V.png" alt="YzHa7V.png"><br>得到flag：”ctf{whatfk}<br>然后按他的提示字母大写提交</p>
+<h1 id="11-头等舱"><a href="#11-头等舱" class="headerlink" title="11.头等舱"></a>11.头等舱</h1><p>打开之后 是一个很狗的页面 什么也没有 看源码 确实啥也没 那好叭 先抓包试试<br><img src="https://s1.ax1x.com/2020/05/24/YzqedP.png" alt="YzqedP.png"><br>然后你就会发现flag: flag{Bugku_k8_23s_istra}</p>
+<h3 id="PS-还有一个题是本地包含-但是貌似出问题了-我一直打不开"><a href="#PS-还有一个题是本地包含-但是貌似出问题了-我一直打不开" class="headerlink" title="PS: 还有一个题是本地包含 但是貌似出问题了 我一直打不开"></a>PS: 还有一个题是本地包含 但是貌似出问题了 我一直打不开</h3>
   </div>
 </article>
 
@@ -198,21 +242,21 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-web2"><span class="toc-number">1.</span> <span class="toc-text">1.web2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-计算器"><span class="toc-number">2.</span> <span class="toc-text">2.计算器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-web基础-GET"><span class="toc-number">3.</span> <span class="toc-text">3.web基础$_GET</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-web基础-POST"><span class="toc-number">4.</span> <span class="toc-text">4.web基础$_POST</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-矛盾"><span class="toc-number">5.</span> <span class="toc-text">5.矛盾</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-web3"><span class="toc-number">6.</span> <span class="toc-text">6.web3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-域名解析"><span class="toc-number">7.</span> <span class="toc-text">7.域名解析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-你必须让他停下"><span class="toc-number">8.</span> <span class="toc-text">8.你必须让他停下</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-变量1"><span class="toc-number">9.</span> <span class="toc-text">9.变量1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-web5"><span class="toc-number">10.</span> <span class="toc-text">10.web5</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-头等舱"><span class="toc-number">11.</span> <span class="toc-text">11.头等舱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PS-还有一个题是本地包含-但是貌似出问题了-我一直打不开"><span class="toc-number">11.0.1.</span> <span class="toc-text">PS: 还有一个题是本地包含 但是貌似出问题了 我一直打不开</span></a></li></ol></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/24/wp-1/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/24/wp-1/&text=wp" target="_blank" rel="noopener"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/24/wp-1/&title=wp" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/24/wp-1/&is_video=false&description=wp" target="_blank" rel="noopener"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=wp&body=Check out this article: http://yoursite.com/2020/05/24/wp-1/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/24/wp-1/&title=wp" target="_blank" rel="noopener"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=wp" target="_blank" rel="noopener"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=wp" target="_blank" rel="noopener"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=wp" target="_blank" rel="noopener"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/24/wp-1/&name=wp&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/24/wp-1/&text=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/24/wp-1/&title=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/24/wp-1/&is_video=false&description=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=bugku web 1-12&body=Check out this article: http://yoursite.com/2020/05/24/wp-1/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/24/wp-1/&title=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/24/wp-1/&title=bugku web 1-12" target="_blank" rel="noopener"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/24/wp-1/&name=bugku web 1-12&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
